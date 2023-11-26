@@ -45,6 +45,7 @@ class App extends Component {
       case 5:
         this.setState({ relationshipStatus: "Enemy" });
         break;
+      case 0:
       case 6:
         this.setState({ relationshipStatus: "Siblings" });
         break;
