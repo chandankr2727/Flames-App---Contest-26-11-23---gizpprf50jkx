@@ -22,16 +22,12 @@ class App extends Component {
       this.setState({ relationshipStatus: "Please Enter valid input" });
       return;
     }
-    if (name1 === 'alia' && name2 === 'karan'){
-      this.setState({relationshipStatus: "Siblings"})
-      return;
-    }
 
     const commonLetters = new Set([...name1].filter(char => name2.includes(char)));
     const remainingName1 = [...name1].filter(char => !commonLetters.has(char)).join('');
     const remainingName2 = [...name2].filter(char => !commonLetters.has(char)).join('');
 
-    const sumOfLengths = (remainingName1.length + remainingName2.length) % 6;
+    const sumOfLengths = Math.abs((remainingName1.length + remainingName2.length) % 6);
 
     switch (sumOfLengths) {
       case 1:
