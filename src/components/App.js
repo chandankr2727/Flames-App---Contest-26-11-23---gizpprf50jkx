@@ -49,7 +49,7 @@ class App extends Component {
         this.setState({ relationshipStatus: "Siblings" });
         break;
       default:
-        this.setState({ relationshipStatus: "Invalid" });
+        this.setState({ relationshipStatus: "Please Enter valid input" });
     }
   };
 
